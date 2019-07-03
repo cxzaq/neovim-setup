@@ -1,10 +1,10 @@
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "javascript,php,python,ruby"
+let g:vim_bootstrap_langs = "javascript,php,go,dart,elixir"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
@@ -85,20 +85,6 @@ Plug 'jelera/vim-javascript-syntax'
 "" PHP Bundle
 Plug 'arnaud-lb/vim-php-namespace'
 
-
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-
-
-" ruby
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-projectionist'
-Plug 'thoughtbot/vim-rspec'
-Plug 'ecomba/vim-ruby-refactoring'
-
-
 "*****************************************************************************
 "*****************************************************************************
 
@@ -168,7 +154,7 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme gruvbox
+  colorscheme seoul256
 endif
 
 set mousemodel=popup
@@ -192,8 +178,6 @@ else
 
 
 endif
-
-
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -581,7 +565,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 "" Turn-on dracula color scheme
 syntax on
-color dracula
+color seoul256
 
 "" ctrlP key for ctrlP plugin
 let g:ctrlp_map = '<c-p>'
